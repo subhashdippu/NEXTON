@@ -23,6 +23,23 @@ const Banner = () => {
       img: "https://i.imgur.com/mAChFeF.png",
     },
   ];
+  const cards = [
+    {
+      title: "For Men's",
+      subtitle: "Starting at $24",
+      bg: "bg-sky-300",
+    },
+    {
+      title: "For Women's",
+      subtitle: "Starting at $19",
+      bg: "bg-purple-300",
+    },
+    {
+      title: "Accessories",
+      subtitle: "Explore accessories",
+      bg: "bg-orange-200",
+    },
+  ];
   const features = [
     {
       icon: <FaShippingFast size={24} className="text-[#0e0e2c]" />,
@@ -89,6 +106,51 @@ const Banner = () => {
                 <p className="text-gray-500 text-sm">{feature.desc}</p>
               </div>
             </div>
+          ))}
+        </div>
+      </section>
+      <section className="text-center px-4 py-12">
+        {/* Heading */}
+        <h2 className="text-3xl font-semibold text-gray-700 mb-10">
+          Start exploring.{" "}
+          <span className="font-normal">Good things are waiting for you</span>
+        </h2>
+
+        {/* Cards */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+          {cards.map((item, index) => (
+            <div
+              key={index}
+              className={`w-full max-w-[300px] ${item.bg} rounded-2xl px-6 py-6 flex justify-between items-center`}
+            >
+              {/* Left: Text */}
+              <div className="text-left">
+                <h3 className="text-lg font-bold text-gray-900">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-gray-800 mt-1">{item.subtitle}</p>
+              </div>
+
+              {/* Right: Centered "SHOP NOW" */}
+              <div className="flex items-center gap-2">
+                <div className="h-10 w-[2px] bg-black" />
+                <span className="text-sm font-medium text-gray-900 whitespace-nowrap">
+                  SHOP NOW →
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Pagination Dots */}
+        <div className="flex justify-center gap-2 mt-8">
+          {[0, 1, 2, 3, 4].map((i) => (
+            <div
+              key={i}
+              className={`h-2 w-2 rounded-full ${
+                i === 2 ? "bg-gray-600" : "bg-gray-300"
+              }`}
+            />
           ))}
         </div>
       </section>
