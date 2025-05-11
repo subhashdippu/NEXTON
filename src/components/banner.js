@@ -3,6 +3,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import { FaShippingFast } from "react-icons/fa";
+import { RiRefund2Fill } from "react-icons/ri";
+import { TbArrowsLeftRight } from "react-icons/tb";
+import { FiGlobe } from "react-icons/fi";
 import { FiSearch } from "react-icons/fi";
 const Banner = () => {
   const slides = [
@@ -17,6 +21,28 @@ const Banner = () => {
       title: "New arrivals just landed",
       subtitle: "From $39.99",
       img: "https://i.imgur.com/mAChFeF.png",
+    },
+  ];
+  const features = [
+    {
+      icon: <FaShippingFast size={24} className="text-[#0e0e2c]" />,
+      title: "Free shipping",
+      desc: "On orders over $50.00",
+    },
+    {
+      icon: <TbArrowsLeftRight size={24} className="text-[#0e0e2c]" />,
+      title: "Very easy to return",
+      desc: "Just phone number",
+    },
+    {
+      icon: <FiGlobe size={24} className="text-[#0e0e2c]" />,
+      title: "Worldwide delivery",
+      desc: "Fast delivery worldwide",
+    },
+    {
+      icon: <RiRefund2Fill size={24} className="text-[#0e0e2c]" />,
+      title: "Refunds policy",
+      desc: "60 days return for any reason",
     },
   ];
   return (
@@ -49,6 +75,22 @@ const Banner = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </section>
+      <section className="max-w-6xl mx-auto px-4 py-8">
+        <div className="bg-white border border-gray-200 rounded-2xl flex  md:flex-row justify-between divide-y md:divide-y-0 md:divide-x">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-4 px-6 py-6 w-full md:w-1/4"
+            >
+              <div>{feature.icon}</div>
+              <div>
+                <p className="font-semibold text-[#0e0e2c]">{feature.title}</p>
+                <p className="text-gray-500 text-sm">{feature.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );
