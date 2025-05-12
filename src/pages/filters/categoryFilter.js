@@ -1,7 +1,6 @@
 import React, { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Range } from "react-range";
-import { Link } from "react-router-dom"; // 1️⃣
+
 import {
   setPriceRange,
   setSelectedCats,
