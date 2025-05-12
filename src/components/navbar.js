@@ -1,6 +1,9 @@
 import { FaSearch, FaUser, FaShoppingCart } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate(); // initialize navigate
+
   return (
     <header className="bg-[#0F1623] w-full px-6 py-4 flex items-center justify-between">
       {/* Logo Section */}
@@ -16,6 +19,7 @@ const Navbar = () => {
           type="text"
           placeholder="Search in products..."
           className="bg-transparent outline-none text-sm w-full"
+          onClick={() => navigate("/radha")}
         />
       </div>
 

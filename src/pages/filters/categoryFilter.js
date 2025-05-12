@@ -1,11 +1,7 @@
 import React, { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import {
-  setPriceRange,
-  setSelectedCats,
-  setSortOrder,
-} from "../../redux/productSlice";
+import { setSelectedCats } from "../../redux/productSlice";
 
 export default function ProductPage() {
   const dispatch = useDispatch();

@@ -56,7 +56,7 @@ const initialState = {
       ],
       addedAt: "2024-01-01",
     },
-  ], // Hardcoded product data here
+  ],
   values: [100, 500], // Price range filter
   selectedCats: [], // Selected categories filter
   sortOrder: "Most Popular", // Sorting filter
@@ -67,7 +67,7 @@ const productSlice = createSlice({
   initialState,
   reducers: {
     setProducts: (state, action) => {
-      state.products = action.payload; // Update products in the state
+      state.products = action.payload;
     },
     setPriceRange: (state, action) => {
       state.values = action.payload;

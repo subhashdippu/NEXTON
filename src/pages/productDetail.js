@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FaStar, FaShoppingBag } from "react-icons/fa";
+import Navbar from "../components/navbar";
+import Footer from "../components/footer";
+
 const sizes = ["S", "M", "L", "XL", "2XL"];
 
 export default function ProductDetail() {
@@ -21,6 +24,7 @@ export default function ProductDetail() {
 
   return (
     <div>
+      <Navbar />
       <div className="flex flex-col lg:flex-row gap-10 p-8">
         {/* Left Panel - Images */}
         <div className="flex flex-col lg:flex-row gap-4 w-full lg:w-1/2">
@@ -141,6 +145,7 @@ export default function ProductDetail() {
         </div>
       </div>
       <h1 className="text-2xl lg:flex-row gap-10 p-8">{product.detail}</h1>
+      <Footer />
     </div>
   );
 }
