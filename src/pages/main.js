@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Banner from "../components/banner";
 import Cards from "../components/cards";
+import Footer from "../components/footer";
 function HomePage() {
   return (
     <div>
@@ -10,6 +11,7 @@ function HomePage() {
       <Banner />
       <Cards />
       <Outlet />
+      <Footer />
     </div>
   );
 }
