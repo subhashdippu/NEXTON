@@ -16,7 +16,7 @@ export default function ProductPage() {
   } = useSelector((state) => state.product);
 
   return (
-    <div className="flex gap-[20px] p-6" style={{ width: "1296px" }}>
+    <div>
       {/* Sidebar */}
       <aside className="w-[309px] space-y-8 pr-6 text-[#2C2C2C] font-medium">
         {/* Categories */}
