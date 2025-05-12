@@ -3,6 +3,7 @@ import CategoryFilter from "./filters/categoryFilter";
 import PriceRangeFilter from "./filters/priceRangeFilter";
 import Navbar from "../components/navbar";
 import SortOrderFilter from "./filters/sortOrderFilter";
+import ProductPage from "./productGrid";
 
 export default function Sidebar() {
   return (
@@ -14,7 +15,7 @@ export default function Sidebar() {
           <PriceRangeFilter />
           <SortOrderFilter />
         </div>
-        {/* <ProductPage /> */}
+        <ProductPage />
       </div>
     </div>
   );

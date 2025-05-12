@@ -10,6 +10,8 @@ const initialState = {
       oldPrice: 200,
       rating: 4.2,
       reviews: 10,
+      detail:
+        "The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value.",
       images: [
         "https://static8.depositphotos.com/1020341/896/i/950/depositphotos_8969502-stock-photo-human-face-with-cracked-texture.jpg",
       ],
